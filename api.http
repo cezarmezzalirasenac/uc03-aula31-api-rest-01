@@ -5,21 +5,20 @@ GET http://localhost:5000/
 ### Obter todos os usuarios
 GET http://localhost:5000/users
 
-### Obter usuario pelo id
-GET http://localhost:5000/users/4
-
+### Obter usuario pelo id 
+GET http://localhost:5000/users/
 
 ### Criar um novo usuário
 POST http://localhost:5000/users
 content-type: application/json
 
 {
-  "id": "4",
-  "name": "Fulano"
+  "name": "Fulano",
+  "city": ""
 }
 
 ### Alterar todos os dados do usuário
-PUT http://localhost:5000/users/4
+PUT http://localhost:5000/users/dd90b6c4-bcfb-4212-93e2-641361d1d81d
 content-type: application/json
 
 {
@@ -27,3 +26,14 @@ content-type: application/json
   "city": "Chico Bel"
 }
 
+### Alterar os dados do usuário
+PATCH http://localhost:5000/users/dd90b6c4-bcfb-4212-93e2-641361d1d81d
+content-type: application/json
+
+{
+  "city": "Pato Branco"
+}
+
+
+### Alterar os dados do usuário
+DELETE http://localhost:5000/users/258da1cd-284b-4a77-a7ab-e4bec0789364
